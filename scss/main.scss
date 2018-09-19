@@ -53,6 +53,8 @@ main {
   padding: 4rem;
   //height: 100%;
   min-height: calc(100vh - 60px);
+  font-family: "DIN Alternate", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 
   .icons {
     margin-top: 1rem;
@@ -113,15 +115,49 @@ main {
 }
 
 //Work/projects
+// .projects {
+//   display: grid;
+//   grid-gap: 0.7rem;
+//   grid-template-columns: repeat(3, 1fr);
+//
+//   img {
+//     width: 100%;
+//     border: 3px #fff solid;
+//
+//     .overlay {
+//       display: none;
+//     }
+//
+//     &:hover {
+//       opactiy: 0.5;
+//       border-color: $secondary-color;
+//       @include easeOut;
+//     }
+//   }
+// }
 
+//TIM
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
+  font-size: 20px;
 
   img {
     width: 100%;
     border: 3px #fff solid;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .item:hover {
+    .overlay {
+      display: block;
+      opactiy: 0.5;
+      border-color: black;
+    }
 
     &:hover {
       opactiy: 0.5;
@@ -182,54 +218,36 @@ main {
   color: #333;
 }
 
-//Footer
-.main-footer {
+#main-footer {
+  padding: center;
   background: darken($primary-color, 10);
   color: set-text-colour($primary-color);
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  .footer-bar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  .footer_text {
+    text-align: right;
+    margin-right: 3%;
+    font-size: 17px;
   }
 
   .footer_icons {
-    margin-right: 10px;
-  }
+    margin-left: 2%;
+    text-align: center;
+    display: block;
+    width: 100px;
+    padding: 4px;
+    a {
+      align: left;
 
-  .footer_text {
-    margin-left: 10px;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
   }
 }
-
-// main-footer {
-//   padding: 3px;
-//   background: darken($primary-color, 10);
-//   color: set-text-colour($primary-color);
-//   height: 60px;
-//
-//   .footer_text {
-//     text-align: left;
-//     font-size: 17px;
-//   }
-//
-//   .footer_icons {
-//     margin-right: 3%;
-//     display: block;
-//     width: 100px;
-//     padding: 4px;
-//     a {
-//       align: right;
-//       display: inline;
-//
-//       &:hover {
-//         color: $secondary-color;
-//         @include easeOut;
-//       }
-//     }
-//   }
-// }
 
 @import "mobile";

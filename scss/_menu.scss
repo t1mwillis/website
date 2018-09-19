@@ -78,25 +78,26 @@
   }
 
   //Branding Side
-  &-branding {
-    background: $primary-color;
-    transform: translate3d(-100%, 0, 0);
-    @include easeOut;
+  // &-branding {
+  //   background: $primary-color;
+  //   transform: translate3d(-100%, 0, 0);
+  //   @include easeOut;
+  //
+  //   &.show {
+  //     //Slide in from left
+  //     transform: translate3d(0, 0, 0);
+  //   }
+  //
+  //   .portrait {
+  //     width: 250px;
+  //     height: 250px;
+  //     background: url("../img/portrait.jpg");
+  //     opacity: 0.9;
+  //     border-radius: 50%;
+  //     border: solid 3px $secondary-color;
+  //   }
+  // }
 
-    &.show {
-      //Slide in from left
-      transform: translate3d(0, 0, 0);
-    }
-
-    .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
-      opacity: 0.9;
-      border-radius: 50%;
-      border: solid 3px $secondary-color;
-    }
-  }
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;
