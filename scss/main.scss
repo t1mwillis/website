@@ -131,6 +131,33 @@ main {
   }
 }
 
+//Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 2px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-colour($secondary-color);
+
+      span {
+        color: set-text-colour($secondary-color);
+      }
+    }
+  }
+}
+
 //Button styles
 .btn {
   display: block;
@@ -155,32 +182,54 @@ main {
   color: #333;
 }
 
-#main-footer {
-  padding: 3px;
+//Footer
+.main-footer {
   background: darken($primary-color, 10);
   color: set-text-colour($primary-color);
   height: 60px;
 
-  .footer_text {
-    text-align: left;
-    font-size: 17px;
+  .footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .footer_icons {
-    margin-right: 3%;
-    display: block;
-    width: 100px;
-    padding: 4px;
-    a {
-      align: right;
-      display: inline;
+    margin-right: 10px;
+  }
 
-      &:hover {
-        color: $secondary-color;
-        @include easeOut;
-      }
-    }
+  .footer_text {
+    margin-left: 10px;
   }
 }
+
+// main-footer {
+//   padding: 3px;
+//   background: darken($primary-color, 10);
+//   color: set-text-colour($primary-color);
+//   height: 60px;
+//
+//   .footer_text {
+//     text-align: left;
+//     font-size: 17px;
+//   }
+//
+//   .footer_icons {
+//     margin-right: 3%;
+//     display: block;
+//     width: 100px;
+//     padding: 4px;
+//     a {
+//       align: right;
+//       display: inline;
+//
+//       &:hover {
+//         color: $secondary-color;
+//         @include easeOut;
+//       }
+//     }
+//   }
+// }
 
 @import "mobile";
